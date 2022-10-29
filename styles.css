@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* position:relative; */
+    color:#090a10;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.des{
+    display:inline;
+}
+
+@media(min-width=1200px){
+.des{
+    display:initial;
+}}
+header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 10px 50px;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    width: 100%;
+}
+a.logo{
+    width: 150px;
+    height: 13px;
+    color: inherit;
+    padding: 7px;
+   
+}
+
+header a{
+    color: inherit;
+}
+header nav a{
+    text-decoration: none;
+    padding: 6px 10px;
+}
+header nav.centre{
+text-align:center;
+}
+header nav.right{
+ text-align: right;
+}
+ section{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}  
+
+/* hover touch1*/
+a.touch{
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 7px;
+  font-weight: 450;
+}
+
+.touch::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  /* background-color: #ce1d47; */
+  background-image: linear-gradient(
+    -225deg,
+    #8C0000 0%,
+    #BD2000 29%,
+    #FA1E0E 67%,
+    #EF8D32 100%);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.touch:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* hover menu*/
+.menu{
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 7px;
+    font-weight: 460;
+  }
+  
+  .menu::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    /* background-color:#090a10 ; */
+    background-image: linear-gradient(
+    -225deg,
+    #142850 0%,
+    #27496D 29%,
+    #0C7B93 67%,
+    #00A8CC 100%);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .menu:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+/* hover centre*/
+nav a{
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 7px;
+  }
+  
+  nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    /* background-color:#1a2354 ; */
+    background-image: linear-gradient(
+        -225deg,
+        #142850 0%,
+        #27496D 29%,
+        #0C7B93 67%,
+        #00A8CC 100%);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  nav a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+section div.content{
+    position:sticky;
+    width: 100%;
+    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+
+}
+section h1{
+    font-size: 3rem;
+}
+section a{
+    color:inherit;
+}
+section .buttoms a{
+    display: inline-block;
+    width:350px;
+    background-color:rgb(255, 253, 253);
+    color: inherit;
+    padding: 15px 50px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0px 50px;
+    transition:0.4s;
+    /* background-blend-mode:normal; */
+    letter-spacing: 2px;
+}
+.exis:hover{
+    /* background-color:#6d707e; */
+    background-image: linear-gradient(
+        -225deg,
+        #142850 0%,
+        #27496D 29%,
+        #0C7B93 67%,
+        #00A8CC 100%);
+    font-size: 13px;
+    color: #eee;
+    border-radius:18px;
+   
+}
+span{
+    background-image: linear-gradient(
+        -225deg,
+        #142850 20%,
+        #27496D 40%,
+        #0C7B93 60%,
+        #00A8CC 100%
+  );
+      
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s linear infinite;
+    display: inline-block; 
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 100% center;
+    }
+  }
+  /*#back1{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;} 
+
+    section video.back1{
+        position:relative;
+        right: 0;
+        bottom: 0;
+      
+    }
+        @media (min-aspect-ratio:16/9){
+            section video.back1{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio:16/9){
+            section video.back1{
+                width: auto;
+                height: 100%;
+            }
+        }
+        
+    
+        
+        section video.back2{
+        position:relative;
+        right: 0;
+        bottom: 0;
+      
+    }
+        @media (min-aspect-ratio:16/9){
+            section video.back2{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio:16/9){
+            section video.back2{
+                width: auto;
+                height: 100%;
+            }
+        }
+
+
+
+
+        section video.back3{
+            position:relative;
+            right: 0;
+            bottom: 0;
+          
+        }
+            @media (min-aspect-ratio:16/9){
+                section video.back3{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @media (max-aspect-ratio:16/9){
+                section video.back3{
+                    width: auto;
+                    height: 100%;
+                }
+            }  
+            
+            
+
+            section video.back4{
+                position:relative;
+                right: 0;
+                bottom: 0;
+              
+            }
+                @media (min-aspect-ratio:16/9){
+                    section video.back4{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                @media (max-aspect-ratio:16/9){
+                    section video.back4{
+                        width: auto;
+                        height: 100%;
+                    }
+                }  */
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
